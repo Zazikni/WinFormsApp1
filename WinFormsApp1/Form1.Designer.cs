@@ -119,6 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -136,8 +137,8 @@
         private TextBox textBox1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
         private GroupBox groupBox1;
+        public TextBox textBox2;
     }
 
 }

@@ -6,6 +6,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+        static public string user = "";
         // имитация данных из бд
         string[] kassir_log = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\login.txt");
         string[] kassir_pass = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\password.txt");
@@ -17,6 +18,7 @@ namespace WinFormsApp1
 
                 if (kassir_pass[index] == textBox1.Text)
                 {
+                    user = textBox2.Text;
                     // Открывается форма работы с товаром
                     Form3 newForm = new Form3();
                     newForm.Show();
@@ -46,6 +48,7 @@ namespace WinFormsApp1
             //Things while closing
             Application.Exit();
         }
+
         
     }
 }
