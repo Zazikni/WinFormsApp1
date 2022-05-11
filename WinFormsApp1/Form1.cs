@@ -10,6 +10,8 @@ namespace WinFormsApp1
         // имитация чтения данных из бд
         string[] kassir_log = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\login.txt" , System.Text.Encoding.Default);
         string[] kassir_pass = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\password.txt", System.Text.Encoding.Default);
+        string[] kassir_name = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\name.txt", System.Text.Encoding.Default);
+
         private void button1_Click(object sender, EventArgs e)
         {
             // поиск логина в списке логинов
@@ -25,7 +27,7 @@ namespace WinFormsApp1
                     // сопоставление введенного пароля с паролем соответствующем индексу введенного логина
                     if (kassir_pass[index] == maskedTextBox1.Text)
                     {
-                        user = textBox2.Text;
+                        user = kassir_name[index];
                         // Открывается форма работы с товаром
                         Form3 newForm = new Form3();
                         newForm.Show();
