@@ -33,11 +33,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,14 +61,6 @@
             this.button1.Text = "Авторизоваться";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(56, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 23);
-            this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
@@ -101,17 +93,25 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(202, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(396, 202);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(56, 106);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.PasswordChar = '*';
+            this.maskedTextBox1.Size = new System.Drawing.Size(284, 23);
+            this.maskedTextBox1.TabIndex = 7;
             // 
             // Form1
             // 
@@ -134,11 +134,11 @@
 
         private Label label1;
         private Button button1;
-        private TextBox textBox1;
         private Label label2;
         private Label label3;
         private GroupBox groupBox1;
         public TextBox textBox2;
+        private MaskedTextBox maskedTextBox1;
     }
 
 }

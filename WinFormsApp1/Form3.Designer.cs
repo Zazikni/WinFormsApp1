@@ -43,6 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,7 +118,7 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(3, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(412, 329);
             this.groupBox2.TabIndex = 5;
@@ -180,7 +181,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(576, 363);
+            this.button4.Location = new System.Drawing.Point(576, 335);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(152, 59);
             this.button4.TabIndex = 7;
@@ -192,29 +193,45 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(703, 426);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(745, 442);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 15);
+            this.label5.Size = new System.Drawing.Size(60, 11);
             this.label5.TabIndex = 8;
             this.label5.Text = "Логин кассира";
+            this.label5.Visible = false;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(642, 425);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(709, 442);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(36, 11);
             this.label6.TabIndex = 9;
             this.label6.Text = "Кассир :";
+            this.label6.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Location = new System.Drawing.Point(576, 400);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(152, 22);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Сдать кассу";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button4);
@@ -254,5 +271,6 @@
         public Label label2;
         private Label label5;
         private Label label6;
+        private Button button5;
     }
 }

@@ -223,9 +223,14 @@ namespace WinFormsApp1
             
             
         }
-        
 
 
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            WithdrawMoney();
+        }
 
 
 
@@ -395,5 +400,28 @@ namespace WinFormsApp1
                 e.Handled = true;
             }
         }
+
+
+
+
+
+        // метод изъятия денег из кассы
+        public void WithdrawMoney()
+        {
+            int current_sum = Convert.ToInt32(File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt")[0]);
+            File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{5000}", System.Text.Encoding.Default);
+            MessageBox.Show(
+                    $"{current_sum - 5000} успешно изъяты из кассы.",
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly
+                    );
+        }
+
+
+        
+        
     }
 }

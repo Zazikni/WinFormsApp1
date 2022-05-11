@@ -27,8 +27,6 @@ namespace WinFormsApp1
             // проверка размера внесенной суммы
             if (Convert.ToDouble(Form3.InputFix(textBox1.Text)) >= sum_counter) 
             {
-                //внесение денег в кассу
-                InsertMoney();
                 // формирование сообщениея о сдаче
                 label1.Text = label1.Text + $"\nВнесено : {Form3.InputFix(textBox1.Text)} р."+ $"\nСдача : {Convert.ToDouble(Form3.InputFix(textBox1.Text)) - sum_counter} р.";
                 MessageBox.Show(
@@ -39,6 +37,8 @@ namespace WinFormsApp1
                     MessageBoxDefaultButton.Button1,
                     MessageBoxOptions.DefaultDesktopOnly
                     );
+                //внесение денег в кассу
+                InsertMoney();
                 //обнуление списков товаров для работы с новым чеком
                 Form3.product = new int[0];
                 Form3.product_counter = new double[0];
@@ -69,12 +69,7 @@ namespace WinFormsApp1
             File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{current_sum + sum_counter}", System.Text.Encoding.Default);
         }
 
-        // метод изъятия денег из кассы
-        public void WithdrawMoney()
-        {
-            int current_sum = Convert.ToInt32(File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt")[0]);
-            File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{5000}", System.Text.Encoding.Default);
-        }
+        
 
 
 
@@ -89,12 +84,8 @@ namespace WinFormsApp1
 
 
         private void Form4_Load(object sender, EventArgs e)
-        {/*
-            int MaxChars = 10; 
-            if (textBox1.Text.Count() > MaxChars)
-                textBox1.ScrollBars = ScrollBars.Vertical;
-            else
-                textBox1.ScrollBars = ScrollBars.None;*/
+        {
+
         }
 
 
