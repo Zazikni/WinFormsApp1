@@ -15,8 +15,6 @@ namespace WinFormsApp1
     {
         // считывание позиций номенклатуры товаров из файла
         static string[] nomenclature_base = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\nomenclature_base.txt");
-        //int[] basket;
-        //int total_sum;
 
         public Form3()
         {
@@ -73,19 +71,6 @@ namespace WinFormsApp1
                     Array.Resize(ref product, product.Length + 1);
                     product[^1] = i;
                     Array.Resize(ref product_counter, product_counter.Length + 1);
-
-
-                    /*
-                      if (InputFix(textBox2.Text) == "")
-                    {
-                        product_counter[^1] = Convert.ToDouble("1");
-                    }
-                    else
-                    {
-                         product_counter[^1] = Convert.ToDouble(InputFix(textBox2.Text));
-                    }
-                     */
-
 
                     //при отсутствии заполнения поля для веса/количества автоматически делает его равным 1
                     if (InputFix(textBox2.Text) == "")
@@ -411,7 +396,7 @@ namespace WinFormsApp1
             int current_sum = Convert.ToInt32(File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt")[0]);
             File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{5000}", System.Text.Encoding.Default);
             MessageBox.Show(
-                    $"{current_sum - 5000} успешно изъяты из кассы.",
+                    $"{current_sum - 5000} р. успешно изъяты из кассы.",
                     "Сообщение",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning,
