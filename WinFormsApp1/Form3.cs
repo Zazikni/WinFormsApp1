@@ -270,7 +270,7 @@ namespace WinFormsApp1
         // метод для отображения списка продуктов в чеке
         public void ProductDisplay()
         {
-            //строка для формирования общей строки вывода
+            //строка с информацией о товаре для отображения
             string text_to_display = "";
             for (int i = 0; i < product.Length; i++)
             {
@@ -283,8 +283,9 @@ namespace WinFormsApp1
                 {
                     mass_counter = "шт";
                 }
-
+                // стоимость
                 double sum = Math.Round(Convert.ToDouble(product_counter[i]) * Convert.ToDouble(nomenclature_matrix[product[i]][1]), 3);
+                
                 text_to_display += nomenclature_matrix[product[i]][2].ToString() + " " + nomenclature_matrix[product[i]][0].ToString() + " " + product_counter[i] + " " + mass_counter + " " + "*" + " " + nomenclature_matrix[product[i]][1].ToString() + " " + "р." + " " + "=" + " " + sum + " " + "р." + "\n";
             }
 
