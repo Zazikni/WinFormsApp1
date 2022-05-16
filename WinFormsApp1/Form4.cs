@@ -54,7 +54,7 @@ namespace WinFormsApp1
         // метод записи информации о внесенных деньгах в кассу
         public void InsertMoney()
         {
-            int current_sum = Convert.ToInt32(File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt")[0]);
+            double current_sum = Convert.ToDouble(File.ReadAllLines(@"cash_holder.txt")[0]);
             if (current_sum >= 200000)
             {
                 MessageBox.Show(
@@ -66,7 +66,7 @@ namespace WinFormsApp1
                     MessageBoxOptions.DefaultDesktopOnly
                     );
             }
-            File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{current_sum + sum_counter}", System.Text.Encoding.Default);
+            File.WriteAllText(@"cash_holder.txt", $"{current_sum + sum_counter}", System.Text.Encoding.Default);
         }
 
         

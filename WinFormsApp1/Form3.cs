@@ -14,7 +14,7 @@ namespace WinFormsApp1
     public partial class Form3 : Form
     {
         // считывание позиций номенклатуры товаров из файла
-        static string[] nomenclature_base = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\nomenclature_base.txt");
+        static string[] nomenclature_base = File.ReadAllLines(@"nomenclature_base.txt");
 
         public Form3()
         {
@@ -394,8 +394,8 @@ namespace WinFormsApp1
         // метод изъятия денег из кассы
         public void WithdrawMoney()
         {
-            int current_sum = Convert.ToInt32(File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt")[0]);
-            File.WriteAllText(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\cash_holder.txt", $"{5000}", System.Text.Encoding.Default);
+            double current_sum = Convert.ToDouble(File.ReadAllLines(@"cash_holder.txt")[0]);
+            File.WriteAllText(@"cash_holder.txt", $"{5000}", System.Text.Encoding.Default);
             MessageBox.Show(
                     $"{current_sum - 5000} р. успешно изъяты из кассы.",
                     "Сообщение",

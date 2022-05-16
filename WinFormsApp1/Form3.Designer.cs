@@ -73,9 +73,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 15);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Список товаров";
             // 
             // button2
             // 
@@ -241,7 +240,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Регистрация Товаров";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form3_MouseMove);
             this.groupBox1.ResumeLayout(false);

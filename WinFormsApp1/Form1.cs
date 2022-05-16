@@ -8,9 +8,9 @@ namespace WinFormsApp1
         }
         static public string user = "";
         // имитация чтения данных из бд
-        string[] kassir_log = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\login.txt" , System.Text.Encoding.Default);
-        string[] kassir_pass = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\password.txt", System.Text.Encoding.Default);
-        string[] kassir_name = File.ReadAllLines(@"C:\Users\Никита\Desktop\kursovaya\WinFormsApp1\WinFormsApp1\name.txt", System.Text.Encoding.Default);
+        string[] kassir_log = File.ReadAllLines(@"login.txt" , System.Text.Encoding.Default);
+        string[] kassir_pass = File.ReadAllLines(@"password.txt", System.Text.Encoding.Default);
+        string[] kassir_name = File.ReadAllLines(@"name.txt", System.Text.Encoding.Default);
 
         private void button1_Click(object sender, EventArgs e)
         {
